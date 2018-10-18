@@ -1,0 +1,31 @@
+{
+  "name": "express-middleware-condition",
+  "version": "0.0.1",
+  "description": "Conditionally add a middleware to express with some common patterns.",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha -R spec"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ty000/express-middleware-condition.git"
+  },
+  "keywords": [
+    "express",
+    "middleware",
+    "condition"
+  ],
+  "author": "ty000",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ty000/express-middleware-condition/issues"
+  },
+  "homepage": "https://github.com/ty000/express-middleware-condition#readme",
+  "dependencies": {
+    "lodash": "^4.17.11"
+  },
+  "devDependencies": {
+    "chai": "^1.7.2",
+    "mocha": "^5.2.0"
+  }
+}
