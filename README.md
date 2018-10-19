@@ -1,12 +1,15 @@
 # express-middleware-condition
 
 `unless(middleware, options)`
+Skip middleware when it fulfill the conditions
+
+`expectThat(middleware, options)`
+Skip middleware when it does not fulfill the conditions
 
 * **middleware** Middleware to skip
 * **options** Conditions to test
     * **[paths]** Can be an array of string, an array of object or a string
     * **[extensions]** Can be a string or an array of string
-
 
 ## Paths ##
 Allow to filter on originalUrl and methods

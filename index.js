@@ -1,7 +1,7 @@
 const { partial, map, some, get } = require('lodash');
 const filters = require('./filtersModules');
 
-module.exports = { unless, unlessLoginPath };
+module.exports = { unless, unlessLoginPath, expectThat };
 
 function unlessLoginPath(middleware) {
   return unless(middleware, { paths: '/login' });
@@ -9,6 +9,9 @@ function unlessLoginPath(middleware) {
 
 function unless(middleware, options = {}) {
   return (req, res, next) => shouldSkipMiddleware(req, options) ? next() : middleware(req, res, next);
+}
+function expectThat(middleware, options = {}) {
+  return (req, res, next) => shouldSkipMiddleware(req, options) ? middleware(req, res, next) : next();
 }
 
 function shouldSkipMiddleware(req, options) {
